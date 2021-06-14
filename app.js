@@ -25,11 +25,9 @@ http
 
     const url = req.url;
     if(url === '/about'){
-        res.write('<h1>Ini adalah Halaman About!</h1>');
-        res.end();
+        renderHTML('./about.html', res);
     } else if (url === '/contact'){
-        res.write('<h1>Ini adalah Halaman Contact!</h1>');
-        res.end();
+       renderHTML('./contact.html', res);
     } else {
         renderHTML('./index.html', res);
     }
